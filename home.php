@@ -70,9 +70,9 @@
     <div class="slider-container">
         <div class="img-window">
             <div class="img-slider">
-                <div class="img-slide"><img src="http://bluey-dev.local/wp-content/uploads/2024/05/cheescake1-scaled.jpg" alt=""></div>
-                <div class="img-slide"><img src="http://bluey-dev.local/wp-content/uploads/2024/05/cheescake2-scaled.jpg" alt=""></div>
-                <div class="img-slide"><img src="http://bluey-dev.local/wp-content/uploads/2024/05/cheescake3-scaled.jpg" alt=""></div>
+                <div class="img-slide isActive"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/car-1.png' ) ); ?>" alt=""></div>
+                <div class="img-slide"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/car-2.png' ) ); ?>" alt=""></div>
+                <div class="img-slide"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/car-3.png' ) ); ?>" alt=""></div>
             </div>
             <button type="button" class="next">
                 <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +152,9 @@
             </p>
         </div>
         <a href="<?php echo esc_url($url[0]->url); ?>" class="link">
-        GET TO KNOW US MORE!
+            <p>
+            GET TO KNOW US MORE!
+            </p>
         </a>
     </div>
     <div class="shop-container">
@@ -168,7 +170,9 @@
             </p>
         </div>
         <a href="<?php echo esc_url($url[2]->url); ?>" class="link">
-        SHOP OUR TIRAMISU
+            <p>
+            SHOP OUR TIRAMISU
+            </p>
         </a>
     </div>
     <div class="faq-container">
@@ -263,7 +267,9 @@
             </div>
         </div>
         <a href="<?php echo esc_url($url[1]->url); ?>" class="link">
-        FIND OUT MORE
+            <p>
+            FIND OUT MORE
+            </p>
         </a>
     </div>
     <div class="contact-container">
@@ -271,11 +277,13 @@
             <h2>
             Let’s get in touch!
             </h2>
-            <p>
+            <p class="desc">
             We’d love to hear from you!
             </p>
             <a href="<?php echo esc_url($url[3]->url); ?>" class="link">
-            REACH US HERE
+                <p>
+                REACH US HERE
+                </p>
             </a>
         </div>
         <div class="svg-container">

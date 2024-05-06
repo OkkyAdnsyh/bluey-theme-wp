@@ -273,12 +273,18 @@ ul{
                 width: 100%;
                 height: 100%;
                 position: absolute;
+                opacity: 0;
+                transition: opacity 0.6s ease;
+
+                &.isActive{
+                    opacity: 1;
+                }
 
 
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: fill;
+                    object-fit: cover;
                 }
             }
         }
@@ -307,6 +313,7 @@ ul{
             width: 1.25rem;
             height: 1.25rem;
             background: var(--accent-color);
+            transition: all .6s ease;
             margin-inline: 2.1rem;
             border-radius: 999px;
             cursor: pointer;
@@ -359,6 +366,23 @@ ul{
         font-size: 2.2rem;
         font-size: 400;
         color: var(--sec-color);
+        background: transparent;
+        transition: all 1s ease-in-out;
+
+        &:hover{
+            background: var(--tertier-color);
+
+            p{
+                transform: scale(1.1);
+                color: var(--accent-color);
+            }
+        }
+
+        p{
+            font: inherit;
+            transform: scale(1);
+            transition: all .8s ease;
+        }
     }
 }
 
@@ -493,7 +517,7 @@ ul{
             font-weight: 400;
             color: var(--sec-color);
         }
-        p{
+        .desc{
             margin-top: 1.5rem;
             font-family: var(--par-font);
             font-size: 1.8rem;
@@ -507,10 +531,28 @@ ul{
             padding: 1.2rem 6.85rem;
             border: solid 2px var(--accent-color);
             border-radius: 4.3rem;
-            font-family: var(--primary-font);
-            font-size: 2.2rem;
-            font-size: 400;
-            color: var(--sec-color);
+            background: transparent;
+            transition: all 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                background: var(--tertier-color);
+
+                p{
+                    transform: scale(1.1);
+                    color: var(--accent-color);
+                }
+            }
+
+            p{
+                font-family: var(--primary-font);
+                font-size: 2.2rem;
+                color: var(--sec-color);
+                transform: scale(1);
+                transition: all .8s ease;
+            }
         }
     }
 }
